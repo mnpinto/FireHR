@@ -1,0 +1,9 @@
+{
+  "FireHR": {
+    "Overview": "/",
+    "Data": "data.html",
+    "Models": "models.html",
+    "Predict": "predict.html",
+    "Command line tools": "cli.html"
+  }
+}
