@@ -74,8 +74,7 @@ nb_path: "nbs/04_predict.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%time</span>
-<span class="n">im</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">get_event_data</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="s1">&#39;temp/banet100m.tif&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">im</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">get_event_data</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="s1">&#39;temp/banet100m.tif&#39;</span><span class="p">)</span>
 <span class="n">preds</span> <span class="o">=</span> <span class="n">get_preds</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">preds</span><span class="p">);</span>
 </pre></div>
