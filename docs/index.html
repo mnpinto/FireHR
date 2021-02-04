@@ -53,6 +53,51 @@ nb_path: "nbs/index.ipynb"
 <p>Command line utility to run FireHR for an event as outputed by BA-Net post-processing:</p>
 <div class="highlight"><pre><span></span>firehr_from_banet_events ba100m_PT2020_218.tif
 </pre></div>
+<p>Optional arguments:</p>
+<table>
+<thead><tr>
+<th>Argument</th>
+<th>default</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>path</td>
+<td>'.'</td>
+<td>str</td>
+<td>Path to save the outputs.</td>
+</tr>
+<tr>
+<td>composite_days_before</td>
+<td>120</td>
+<td>int</td>
+<td>Time window size in days for the pre-fire data</td>
+</tr>
+<tr>
+<td>composite_days_after</td>
+<td>120</td>
+<td>int</td>
+<td>Time window size in days for the post-fire data</td>
+</tr>
+<tr>
+<td>max_cloud_fraction</td>
+<td>None</td>
+<td>float (0.0-1.0)</td>
+<td>Remove images with a cloud fraction higher than specified</td>
+</tr>
+<tr>
+<td>use_least_cloudy</td>
+<td>None</td>
+<td>int</td>
+<td>Select the n least cloudy images in the time_window</td>
+</tr>
+</tbody>
+</table>
+<p>Example using <code>use_least_cloudy</code> parameter:</p>
+<div class="highlight"><pre><span></span>firehr_from_banet_events ba100m_PT2020_218.tif --use_least_cloudy <span class="m">5</span>
+</pre></div>
 
 </div>
 </div>

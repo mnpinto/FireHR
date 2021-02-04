@@ -44,8 +44,8 @@ def load_pretrained_model(weights=_WEIGHTS, ni=6, nc=1, half_precision=True, gpu
     model = FireHR(ni,nc)
     st = torch.load(weights, map_location=torch.device('cpu'))
     model.load_state_dict(st['model'])
-    if half_precision: model = model.half()
     if gpu:
+        if half_precision: model = model.half()
         if torch.cuda.is_available():
             model = model.cuda()
         else:
