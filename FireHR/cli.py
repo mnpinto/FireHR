@@ -21,10 +21,11 @@ def firehr_from_banet_events(
         max_cloud_fraction:Param("Maximum fraction of cloud pixels",float)=None,
         use_least_cloudy:Param("Number of least cloudy images to use",int)=None):
     path = Path(path)
+    path.mkdir(exist_ok=True, parents=True)
     event_id = '_'.join(Path(file).stem.split('_')[1:])
     year = int(re.findall('(\d{4})', Path(file).stem.split('_')[1])[0])
     im, transform, crs = get_event_data(
         event_id, year, file, composite_days=[composite_days_before,composite_days_after],
-        max_cloud_fraction=max_cloud_fraction, use_least_cloudy=use_least_cloudy)
+        max_cloud_fraction=max_cloud_fraction, use_least_cloudy=use_least_cloudy, path=path)
     preds = get_preds(im, gpu=False)
-    save_data(path/f'firehr_{event_id}.tif', (preds*255).astype(np.uint8), crs=crs, transform=transform)
+    save_data(path/f'{event_id}/firehr_{event_id}.tif', (preds*255).astype(np.uint8), crs=crs, transform=transform)
