@@ -72,7 +72,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="RegionST" class="doc_header"><code>class</code> <code>RegionST</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L28" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RegionST</code>(<strong><code>name</code></strong>:<code>str</code>, <strong><code>bbox</code></strong>:<code>list</code>, <strong><code>pixel_size</code></strong>:<code>float</code>, <strong><code>time_start</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>time_end</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>time_freq</code></strong>:<code>str</code>=<em><code>'D'</code></em>, <strong><code>time_margin</code></strong>:<code>int</code>=<em><code>0</code></em>) :: <a href="/FireHR/data.html#Region"><code>Region</code></a></p>
+<h2 id="RegionST" class="doc_header"><code>class</code> <code>RegionST</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L29" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>RegionST</code>(<strong><code>name</code></strong>:<code>str</code>, <strong><code>bbox</code></strong>:<code>list</code>, <strong><code>pixel_size</code></strong>:<code>float</code>, <strong><code>time_start</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>time_end</code></strong>:<code>str</code>=<em><code>None</code></em>, <strong><code>time_freq</code></strong>:<code>str</code>=<em><code>'D'</code></em>, <strong><code>time_margin</code></strong>:<code>int</code>=<em><code>0</code></em>) :: <a href="/FireHR/data.html#Region"><code>Region</code></a></p>
 </blockquote>
 <p>Defines a region in space and time with a name, a bounding box and the pixel size.</p>
 
@@ -97,7 +97,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="extract_region" class="doc_header"><code>extract_region</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L59" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>extract_region</code>(<strong><code>df_row</code></strong>)</p>
+<h4 id="extract_region" class="doc_header"><code>extract_region</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L60" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>extract_region</code>(<strong><code>df_row</code></strong>)</p>
 </blockquote>
 <p>Create Region object from a row of the metadata dataframe.</p>
 
@@ -129,7 +129,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="coords2bbox" class="doc_header"><code>coords2bbox</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L69" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>coords2bbox</code>(<strong><code>lon</code></strong>, <strong><code>lat</code></strong>, <strong><code>pixel_size</code></strong>)</p>
+<h4 id="coords2bbox" class="doc_header"><code>coords2bbox</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L70" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>coords2bbox</code>(<strong><code>lon</code></strong>, <strong><code>lat</code></strong>, <strong><code>pixel_size</code></strong>)</p>
 </blockquote>
 
 </div>
@@ -153,7 +153,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="split_region" class="doc_header"><code>split_region</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L72" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_region</code>(<strong><code>region</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>size</code></strong>:<code>int</code>)</p>
+<h4 id="split_region" class="doc_header"><code>split_region</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L73" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>split_region</code>(<strong><code>region</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>size</code></strong>:<code>int</code>)</p>
 </blockquote>
 
 </div>
@@ -177,7 +177,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="merge_tifs" class="doc_header"><code>merge_tifs</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L95" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>merge_tifs</code>(<strong><code>files</code></strong>:<code>list</code>, <strong><code>fname</code></strong>:<code>str</code>, <strong><code>delete</code></strong>=<em><code>False</code></em>)</p>
+<h4 id="merge_tifs" class="doc_header"><code>merge_tifs</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L96" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>merge_tifs</code>(<strong><code>files</code></strong>:<code>list</code>, <strong><code>fname</code></strong>:<code>str</code>, <strong><code>delete</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 
 </div>
@@ -208,7 +208,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="filter_region" class="doc_header"><code>filter_region</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L109" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_region</code>(<strong><code>image_collection</code></strong>:<code>ImageCollection</code>, <strong><code>region</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>times</code></strong>:<code>tuple</code>, <strong><code>bands</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="filter_region" class="doc_header"><code>filter_region</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L110" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_region</code>(<strong><code>image_collection</code></strong>:<code>ImageCollection</code>, <strong><code>region</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>times</code></strong>:<code>tuple</code>, <strong><code>bands</code></strong>=<em><code>None</code></em>)</p>
 </blockquote>
 
 </div>
@@ -232,7 +232,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="filter_cloudy" class="doc_header"><code>filter_cloudy</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L117" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_cloudy</code>(<strong><code>image_collection</code></strong>:<code>ImageCollection</code>, <strong><code>max_cloud_fraction</code></strong>=<em><code>0.2</code></em>)</p>
+<h4 id="filter_cloudy" class="doc_header"><code>filter_cloudy</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L118" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>filter_cloudy</code>(<strong><code>image_collection</code></strong>:<code>ImageCollection</code>, <strong><code>max_cloud_fraction</code></strong>=<em><code>0.2</code></em>)</p>
 </blockquote>
 
 </div>
@@ -256,7 +256,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="n_least_cloudy" class="doc_header"><code>n_least_cloudy</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L121" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>n_least_cloudy</code>(<strong><code>image_collection</code></strong>:<code>ImageCollection</code>, <strong><code>n</code></strong>=<em><code>5</code></em>)</p>
+<h4 id="n_least_cloudy" class="doc_header"><code>n_least_cloudy</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L122" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>n_least_cloudy</code>(<strong><code>image_collection</code></strong>:<code>ImageCollection</code>, <strong><code>n</code></strong>=<em><code>5</code></em>)</p>
 </blockquote>
 
 </div>
@@ -280,7 +280,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="download_data" class="doc_header"><code>download_data</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L131" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>download_data</code>(<strong><code>R</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>times</code></strong>, <strong><code>products</code></strong>, <strong><code>bands</code></strong>, <strong><code>path_save</code></strong>, <strong><code>scale</code></strong>=<em><code>10</code></em>, <strong><code>max_cloud_fraction</code></strong>=<em><code>None</code></em>, <strong><code>use_least_cloudy</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="download_topography_data" class="doc_header"><code>download_topography_data</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L132" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>download_topography_data</code>(<strong><code>R</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>path_save</code></strong>=<em><code>Path('.')</code></em>, <strong><code>scale</code></strong>=<em><code>10</code></em>)</p>
 </blockquote>
 
 </div>
@@ -304,7 +304,31 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="download_data_ts" class="doc_header"><code>download_data_ts</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L235" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>download_data_ts</code>(<strong><code>R</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>products</code></strong>, <strong><code>bands</code></strong>, <strong><code>path_save</code></strong>, <strong><code>scale</code></strong>=<em><code>10</code></em>)</p>
+<h4 id="download_data" class="doc_header"><code>download_data</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L155" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>download_data</code>(<strong><code>R</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>times</code></strong>, <strong><code>products</code></strong>, <strong><code>bands</code></strong>, <strong><code>path_save</code></strong>, <strong><code>scale</code></strong>=<em><code>10</code></em>, <strong><code>max_cloud_fraction</code></strong>=<em><code>None</code></em>, <strong><code>use_least_cloudy</code></strong>=<em><code>None</code></em>)</p>
+</blockquote>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="download_data_ts" class="doc_header"><code>download_data_ts</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L259" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>download_data_ts</code>(<strong><code>R</code></strong>:<a href="/FireHR/data.html#RegionST"><code>RegionST</code></a>, <strong><code>products</code></strong>, <strong><code>bands</code></strong>, <strong><code>path_save</code></strong>, <strong><code>scale</code></strong>=<em><code>10</code></em>)</p>
 </blockquote>
 
 </div>
@@ -370,7 +394,7 @@ nb_path: "nbs/01_data.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="get_event_data" class="doc_header"><code>get_event_data</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L314" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_event_data</code>(<strong><code>event_id</code></strong>, <strong><code>year</code></strong>, <strong><code>coarse_mask_file</code></strong>, <strong><code>path</code></strong>=<em><code>Path('.')</code></em>, <strong><code>coarse_mask_doy_layer</code></strong>=<em><code>2</code></em>, <strong><code>products</code></strong>=<em><code>['COPERNICUS/S2']</code></em>, <strong><code>bands</code></strong>=<em><code>['B4', 'B8', 'B12']</code></em>, <strong><code>scale_factor</code></strong>=<em><code>0.0001</code></em>, <strong><code>composite_days</code></strong>=<em><code>[60, 60]</code></em>, <strong><code>max_cloud_fraction</code></strong>=<em><code>None</code></em>, <strong><code>use_least_cloudy</code></strong>=<em><code>None</code></em>)</p>
+<h4 id="get_event_data" class="doc_header"><code>get_event_data</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/data.py#L338" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>get_event_data</code>(<strong><code>event_id</code></strong>, <strong><code>year</code></strong>, <strong><code>coarse_mask_file</code></strong>, <strong><code>path</code></strong>=<em><code>Path('.')</code></em>, <strong><code>coarse_mask_doy_layer</code></strong>=<em><code>2</code></em>, <strong><code>products</code></strong>=<em><code>['COPERNICUS/S2']</code></em>, <strong><code>bands</code></strong>=<em><code>['B4', 'B8', 'B12']</code></em>, <strong><code>scale_factor</code></strong>=<em><code>0.0001</code></em>, <strong><code>composite_days</code></strong>=<em><code>[60, 60]</code></em>, <strong><code>max_cloud_fraction</code></strong>=<em><code>None</code></em>, <strong><code>use_least_cloudy</code></strong>=<em><code>None</code></em>, <strong><code>scale</code></strong>=<em><code>10</code></em>, <strong><code>topography</code></strong>=<em><code>False</code></em>)</p>
 </blockquote>
 
 </div>
@@ -397,7 +421,7 @@ nb_path: "nbs/01_data.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">im</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">get_event_data</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="s1">&#39;temp/banet100m.tif&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">im</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span> <span class="o">=</span> <span class="n">get_event_data</span><span class="p">(</span><span class="s1">&#39;temp&#39;</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="s1">&#39;temp/banet100m.tif&#39;</span><span class="p">,</span> <span class="n">topography</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">im</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">transform</span><span class="p">,</span> <span class="n">crs</span>
 </pre></div>
 
@@ -415,6 +439,7 @@ nb_path: "nbs/01_data.ipynb"
 Event time_end: 2020-09-11 00:00:00
 Downloading GEE median composite for: 2020-03-06 00:00:00 to 2020-05-05 00:00:00
 Downloading GEE median composite for: 2020-09-12 00:00:00 to 2020-11-11 00:00:00
+Downloading topography data.
 </pre>
 </div>
 </div>
