@@ -361,7 +361,7 @@ def get_event_data(event_id, year, coarse_mask_file, path=Path('.'),
                       scale=scale)
     if topography:
         print('Downloading topography data.')
-        download_topography_data(R, path/R.name, scale=scale)
+        download_topography_data(R, path/event_id/'topography', scale=scale)
 
     rst_ba100 = rst_ba100.read(coarse_mask_doy_layer)
     s10before_files = np.array((path/R.name/'before').ls(exclude=['.xml']))[[1,2,0]].tolist()
