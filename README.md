@@ -2,13 +2,29 @@
 
 
 
-## Install
+## Install using pip
 
 `pip install FireHR`
 
+## Install from repo
+```bash
+git clone https://github.com/mnpinto/FireHR
+cd FireHR; pip install -e .
+```
+
 ## How to use
 
-### Command line utility to run FireHR for an event as outputed by BA-Net post-processing
+#### Configuration of Google Earth Engine API
+Run the following python code and follow the link to generate the authentication file:
+```python
+import ee
+ee.Authenticate()
+```
+Once you are done you should see the message `Successfully saved authorization token.` and the file `~/.config/earthengine/credentials` should exist. 
+
+Please refer to https://developers.google.com/earth-engine/guides/python_install for more information about the GEE Python API. 
+
+#### Command line utility to run FireHR for an event as outputed by BA-Net post-processing
 ```bash
 firehr_from_banet_events ba100m_PT2020_218.tif
 ```

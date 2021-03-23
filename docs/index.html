@@ -31,7 +31,7 @@ nb_path: "nbs/index.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Install">Install<a class="anchor-link" href="#Install"> </a></h2>
+<h2 id="Install-using-pip">Install using pip<a class="anchor-link" href="#Install-using-pip"> </a></h2>
 </div>
 </div>
 </div>
@@ -44,13 +44,34 @@ nb_path: "nbs/index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Install-from-repo">Install from repo<a class="anchor-link" href="#Install-from-repo"> </a></h2><div class="highlight"><pre><span></span>git clone https://github.com/mnpinto/FireHR
+<span class="nb">cd</span> FireHR<span class="p">;</span> pip install -e .
+</pre></div>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="How-to-use">How to use<a class="anchor-link" href="#How-to-use"> </a></h2>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Command-line-utility-to-run-FireHR-for-an-event-as-outputed-by-BA-Net-post-processing">Command line utility to run FireHR for an event as outputed by BA-Net post-processing<a class="anchor-link" href="#Command-line-utility-to-run-FireHR-for-an-event-as-outputed-by-BA-Net-post-processing"> </a></h3><div class="highlight"><pre><span></span>firehr_from_banet_events ba100m_PT2020_218.tif
+<h4 id="Configuration-of-Google-Earth-Engine-API">Configuration of Google Earth Engine API<a class="anchor-link" href="#Configuration-of-Google-Earth-Engine-API"> </a></h4><p>Run the following python code and follow the link to generate the authentication file:</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ee</span>
+<span class="n">ee</span><span class="o">.</span><span class="n">Authenticate</span><span class="p">()</span>
+</pre></div>
+<p>Once you are done you should see the message <code>Successfully saved authorization token.</code> and the file <code>~/.config/earthengine/credentials</code> should exist.</p>
+<p>Please refer to <a href="https://developers.google.com/earth-engine/guides/python_install">https://developers.google.com/earth-engine/guides/python_install</a> for more information about the GEE Python API.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Command-line-utility-to-run-FireHR-for-an-event-as-outputed-by-BA-Net-post-processing">Command line utility to run FireHR for an event as outputed by BA-Net post-processing<a class="anchor-link" href="#Command-line-utility-to-run-FireHR-for-an-event-as-outputed-by-BA-Net-post-processing"> </a></h4><div class="highlight"><pre><span></span>firehr_from_banet_events ba100m_PT2020_218.tif
 </pre></div>
 <p>Optional arguments:</p>
 <table>
