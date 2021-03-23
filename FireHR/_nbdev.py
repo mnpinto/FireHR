@@ -19,8 +19,8 @@ index = {"Region": "01_data.ipynb",
          "ChLin": "02_models.ipynb",
          "FireHR": "02_models.ipynb",
          "load_pretrained_model": "02_models.ipynb",
-         "get_preds": "04_predict.ipynb",
-         "firehr_from_banet_events": "05_cli.ipynb"}
+         "get_preds": "03_predict.ipynb",
+         "firehr_from_banet_events": "04_cli.ipynb"}
 
 modules = ["data.py",
            "models.py",

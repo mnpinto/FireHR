@@ -1,5 +1,5 @@
 # A Practical Method for High-Resolution Burned Areas Monitoring using Sentinel-2 and VIIRS 
-> [placeholder]
+
 
 
 ## Install

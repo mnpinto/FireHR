@@ -3,8 +3,9 @@
 __all__ = ['expand_filter', 'ChLin', 'FireHR', 'load_pretrained_model']
 
 # Cell
-import os
+import os, sys
 from fastai.vision.all import *
+import FireHR
 
 # Cell
 def expand_filter(x, ks=3):
@@ -39,7 +40,7 @@ class FireHR(Module):
         return self.finalconv(x)
 
 # Cell
-_WEIGHTS = os.path.expanduser('~/.firehr/') + 'model512.pth'
+_WEIGHTS = sys.modules[FireHR.__name__].__path__[0] + '/data/model512.pth'
 def load_pretrained_model(weights=_WEIGHTS, ni=6, nc=1, half_precision=True, gpu=True):
     model = FireHR(ni,nc)
     st = torch.load(weights, map_location=torch.device('cpu'))
