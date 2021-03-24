@@ -1,5 +1,5 @@
 # A Practical Method for High-Resolution Burned Areas Monitoring using Sentinel-2 and VIIRS 
-
+(A scientific article describing this methodology is currently under review. More information and additional examples of usage will be provided soon.)
 
 
 ## Install using pip
