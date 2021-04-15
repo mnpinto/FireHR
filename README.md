@@ -1,6 +1,7 @@
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xrI2lZmqjkgnFzskl-VZFDExYeOrr-en)
+
 # A Practical Method for High-Resolution Burned Areas Monitoring using Sentinel-2 and VIIRS 
 (A scientific article describing this methodology is currently under review. More information and additional examples of usage will be provided soon.)
-
 
 ## Install using pip
 
