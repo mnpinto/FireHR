@@ -2,8 +2,7 @@
 
 __all__ = ["index", "modules", "custom_doc_links", "git_url"]
 
-index = {"Region": "01_data.ipynb",
-         "RegionST": "01_data.ipynb",
+index = {"RegionST": "01_data.ipynb",
          "extract_region": "01_data.ipynb",
          "coords2bbox": "01_data.ipynb",
          "split_region": "01_data.ipynb",
