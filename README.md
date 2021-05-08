@@ -7,6 +7,8 @@ Article: https://www.mdpi.com/2072-4292/13/9/1608
 
 `pip install FireHR==0.1.1`
 
+**Warning:** version 0.1.2 has some bugs that still need fixing. Make sure you use version 0.1.1 unless you are just using the Sentinel-2 data download utility as shown in this notebook: https://colab.research.google.com/drive/1CqerpiyWeFty396VZPov_mGe7YBHHlKs
+
 ## Install development version from repo
 ```bash
 git clone https://github.com/mnpinto/FireHR
