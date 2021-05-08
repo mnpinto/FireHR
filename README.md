@@ -7,7 +7,7 @@ Article: https://www.mdpi.com/2072-4292/13/9/1608
 
 `pip install FireHR==0.1.1`
 
-## Install from repo
+## Install development version from repo
 ```bash
 git clone https://github.com/mnpinto/FireHR
 cd FireHR; pip install -e .
