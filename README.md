@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-# A Practical Method for High-Resolution Burned Areas Monitoring using Sentinel-2 and VIIRS 
-
-=======
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xrI2lZmqjkgnFzskl-VZFDExYeOrr-en)
->>>>>>> 4e57d28682ee6f046bf5e744163bfed9de8dec65
 
 # A Practical Method for High-Resolution Burned Area Monitoring using Sentinel-2 and VIIRS 
 Article: https://www.mdpi.com/2072-4292/13/9/1608
 
-## Install using pip
+## Install the lastest stable version using pip
 
-`pip install FireHR`
+`pip install FireHR==0.1.1`
 
 ## Install from repo
 ```bash
