@@ -1,5 +1,7 @@
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1xrI2lZmqjkgnFzskl-VZFDExYeOrr-en)
 
+For help with the library join my discord server: https://discord.gg/vpnTAw4q62
+
 # A Practical Method for High-Resolution Burned Area Monitoring using Sentinel-2 and VIIRS 
 Article: https://www.mdpi.com/2072-4292/13/9/1608
 
