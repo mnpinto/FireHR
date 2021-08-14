@@ -57,6 +57,7 @@ def download_model_weights(weight_file='model512.pth'):
 # Cell
 _WEIGHTS = Path(os.path.expandvars('$HOME'))/'.firehr/model512.pth'
 def load_pretrained_model(weights=_WEIGHTS, ni=6, nc=1, half_precision=True, gpu=True):
+    download_model_weights()
     model = FireHR(ni,nc)
     st = torch.load(weights, map_location=torch.device('cpu'))
     model.load_state_dict(st['model'])
