@@ -33,4 +33,4 @@ def firehr_from_banet_events(
         topography=topography)
     if not skip_preds:
         preds = get_preds(im, gpu=False)
-    save_data(path/f'{event_id}/firehr_{event_id}.tif', (preds*255).astype(np.uint8), crs=crs, transform=transform)
+        save_data(path/f'{event_id}/firehr_{event_id}.tif', (preds*255).astype(np.uint8), crs=crs, transform=transform)

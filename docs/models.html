@@ -47,7 +47,7 @@ nb_path: "nbs/02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="expand_filter" class="doc_header"><code>expand_filter</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L11" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>expand_filter</code>(<strong><code>x</code></strong>, <strong><code>ks</code></strong>=<em><code>3</code></em>)</p>
+<h4 id="expand_filter" class="doc_header"><code>expand_filter</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L12" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>expand_filter</code>(<strong><code>x</code></strong>, <strong><code>ks</code></strong>=<em><code>3</code></em>)</p>
 </blockquote>
 
 </div>
@@ -71,7 +71,7 @@ nb_path: "nbs/02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="ChLin" class="doc_header"><code>class</code> <code>ChLin</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L19" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ChLin</code>(<strong><code>ni</code></strong>, <strong><code>nf</code></strong>) :: <code>Module</code></p>
+<h2 id="ChLin" class="doc_header"><code>class</code> <code>ChLin</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L20" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>ChLin</code>(<strong><code>ni</code></strong>, <strong><code>nf</code></strong>) :: <code>Module</code></p>
 </blockquote>
 <p>Same as <code>nn.Module</code>, but no need for subclasses to call <code>super().__init__</code></p>
 
@@ -193,7 +193,70 @@ nb_path: "nbs/02_models.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="load_pretrained_model" class="doc_header"><code>load_pretrained_model</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L44" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>load_pretrained_model</code>(<strong><code>weights</code></strong>=<em><code>'/media/mnpinto/Data/FireHR/FireHR/data/model512.pth'</code></em>, <strong><code>ni</code></strong>=<em><code>6</code></em>, <strong><code>nc</code></strong>=<em><code>1</code></em>, <strong><code>half_precision</code></strong>=<em><code>True</code></em>, <strong><code>gpu</code></strong>=<em><code>True</code></em>)</p>
+<h4 id="download_model_weights" class="doc_header"><code>download_model_weights</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L44" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>download_model_weights</code>(<strong><code>weight_file</code></strong>=<em><code>'model512.pth'</code></em>)</p>
+</blockquote>
+<p>Download model weights if they don't exist yet on ~/.firehr.</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">download_model_weights</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Using local model weights /home/mnpinto/.firehr/model512.pth
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    {% endraw %}
+
+    {% raw %}
+    
+<div class="cell border-box-sizing code_cell rendered">
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+<div class="output_markdown rendered_html output_subarea ">
+<h4 id="load_pretrained_model" class="doc_header"><code>load_pretrained_model</code><a href="https://github.com/mnpinto/FireHR/tree/master/FireHR/models.py#L59" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>load_pretrained_model</code>(<strong><code>weights</code></strong>=<em><code>Path('/home/mnpinto/.firehr/model512.pth')</code></em>, <strong><code>ni</code></strong>=<em><code>6</code></em>, <strong><code>nc</code></strong>=<em><code>1</code></em>, <strong><code>half_precision</code></strong>=<em><code>True</code></em>, <strong><code>gpu</code></strong>=<em><code>True</code></em>)</p>
 </blockquote>
 
 </div>

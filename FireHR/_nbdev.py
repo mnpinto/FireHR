@@ -17,6 +17,7 @@ index = {"RegionST": "01_data.ipynb",
          "expand_filter": "02_models.ipynb",
          "ChLin": "02_models.ipynb",
          "FireHR": "02_models.ipynb",
+         "download_model_weights": "02_models.ipynb",
          "load_pretrained_model": "02_models.ipynb",
          "get_preds": "03_predict.ipynb",
          "firehr_from_banet_events": "04_cli.ipynb"}
