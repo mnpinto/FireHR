@@ -24,7 +24,7 @@ class RegionST(Region):
     "Defines a region in space and time with a name, a bounding box and the pixel size."
     def __init__(self, name:str, bbox:list, pixel_size:float=None, scale_meters:int=None,
                  time_start:str=None, time_end:str=None, time_freq:str='D', time_margin:int=0,
-                 shape:tuple=None):
+                 shape:tuple=None, epsg=4326):
         if scale_meters is not None and pixel_size is not None:
             raise Exception('Either pixel_size or scale_meters must be set to None.')
         self.name = name
@@ -33,6 +33,7 @@ class RegionST(Region):
             self.pixel_size = pixel_size
         else:
             self.pixel_size = scale_meters/111000
+        self.epsg         = epsg
         self.scale_meters = scale_meters
         self._shape       = shape
         self.time_start   = pd.Timestamp(str(time_start))
@@ -356,7 +357,7 @@ def get_event_data(event_id, year, coarse_mask_file, path=Path('.'),
                    coarse_mask_doy_layer=2, products=['COPERNICUS/S2'],
                    bands=['B4', 'B8', 'B12'], scale_factor=1e-4, composite_days=[60,60],
                    max_cloud_fraction=None, use_least_cloudy=None, scale=10,
-                   topography=False):
+                   topography=False, banet_pixel_size=0.001):
     rst_ba100 = open_tif(coarse_mask_file)
     doys = rst_ba100.read(coarse_mask_doy_layer).astype(np.float16)
     doys[doys==0] = np.nan
@@ -368,6 +369,7 @@ def get_event_data(event_id, year, coarse_mask_file, path=Path('.'),
     print('Event time_end:', str(time_end))
     R = RegionST(event_id, list(rst_ba100.bounds), scale_meters=scale,
                  time_start=time_start, time_end=time_end, time_margin=1)
+    R_banet = R.new(pixel_size=banet_pixel_size)
     before = (R.times[0]-pd.Timedelta(days=composite_days[0]), R.times[0])
     after  = (R.times[-1], R.times[-1]+pd.Timedelta(days=composite_days[1]))
     for mode, time_window in zip(['before', 'after'], [before, after]):
@@ -389,7 +391,7 @@ def get_event_data(event_id, year, coarse_mask_file, path=Path('.'),
         [rasterio.open(str(f)).read() for f in s10before_files]).astype(np.float16)*scale_factor
     rst_s10after = np.concatenate(
         [rasterio.open(str(f)).read() for f in s10after_files]).astype(np.float16)*scale_factor
-    rst_ba100 = downsample(rst_ba100, src_tfm=R.transform, dst_tfm=transform,
+    rst_ba100 = downsample(rst_ba100, src_tfm=R_banet.transform, dst_tfm=transform,
                           dst_shape=(1, *rst_s10before.shape[-2:]), resampling='bilinear').astype(np.float32)
     im = np.concatenate([rst_s10before, rst_s10after, rst_ba100], axis=0).transpose(1,2,0)
     return im, transform, crs

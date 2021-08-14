@@ -9,6 +9,7 @@ import torch
 import rasterio
 import matplotlib.pyplot as plt
 from pathlib import Path
+from IPython.core.debugger import set_trace
 from fastprogress import progress_bar
 from banet.predict import image2tiles, tiles2image
 from rasterio.crs import CRS

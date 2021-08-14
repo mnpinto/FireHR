@@ -21,16 +21,20 @@ def firehr_from_banet_events(
         max_cloud_fraction:Param("Maximum fraction of cloud pixels",float)=None,
         use_least_cloudy:Param("Number of least cloudy images to use",int)=None,
         topography:Param("Download also topography for the event region",bool)=False,
-        skip_preds:Param("Skip computation of high resolution burned area", bool)=False):
+        skip_preds:Param("Skip computation of high resolution burned area", bool)=False,
+        replace_preds:Param("If set to True, model preds will be recomputed",bool)=False):
     path = Path(path)
     path.mkdir(exist_ok=True, parents=True)
     event_id = '_'.join(Path(file).stem.split('_')[1:])
     year = int(re.findall('(\d{4})', Path(file).stem.split('_')[1])[0])
     if topography in [True, 'true', 'True', 'TRUE']: topography = True
+    if skip_preds in [True, 'true', 'True', 'TRUE']: skip_preds = True
+    if replace_preds in [True, 'true', 'True', 'TRUE']: replace_preds = True
     im, transform, crs = get_event_data(
         event_id, year, file, composite_days=[composite_days_before,composite_days_after],
         max_cloud_fraction=max_cloud_fraction, use_least_cloudy=use_least_cloudy, path=path,
         topography=topography)
     if not skip_preds:
-        preds = get_preds(im, gpu=False)
-        save_data(path/f'{event_id}/firehr_{event_id}.tif', (preds*255).astype(np.uint8), crs=crs, transform=transform)
+        if not (path/f'{event_id}/firehr_{event_id}.tif').is_file() or replace_preds:
+            preds = get_preds(im, gpu=False)
+            save_data(path/f'{event_id}/firehr_{event_id}.tif', (preds*255).astype(np.uint8), crs=crs, transform=transform)
