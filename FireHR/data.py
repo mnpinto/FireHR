@@ -65,7 +65,7 @@ class RegionST(Region):
         if time_end is None:
             time_end = args['time_end']
         return cls(args['name'], args['bbox'], args['pixel_size'],
-                   time_start, time_end)
+                   time_start=time_start, time_end=time_end)
 
 def extract_region(df_row, cls=Region):
     "Create Region object from a row of the metadata dataframe."

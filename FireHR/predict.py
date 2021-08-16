@@ -20,7 +20,6 @@ from .models import *
 # Cell
 def get_preds(im, thr=0.5, tile_size=2048, tile_step=2000, max_image_size=2048,
               coarse_mask_expansion_size=101, gpu=True):
-    if not gpu: max_image_size=10000
     image_size = im.shape[:2]
     if max(image_size) < max_image_size:
         im = torch.from_numpy(im)[None].permute(0,3,1,2).float()
